@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout with Flexbox</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: lightgray;
+      text-align: center;
+      padding: 60px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .footer {
+      background-color: lightgray;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+    }
+    .container {
+      display: flex; /* Sử dụng Flexbox */
+    }
+    .column {
+      flex: 1; /* Để các cột có cùng chiều rộng */
+      padding: 100px;
+      box-sizing: border-box;
+      position: relative;
+    }
+    .column:nth-child(1) {
+      background-color: #585c59;
+    }
+    .column:nth-child(2) {
+      background-color: #838784;
+    }
+    .column:nth-child(3) {
+      background-color: #babfbb;
+    }
+    .column-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">Header</div>
+  <div class="container">
+    <div class="column"><p class="column-text">Column</p></div>
+    <div class="column"><p class="column-text">Column</p></div>
+    <div class="column"><p class="column-text">Column</p></div>
+  </div>
+  <div class="footer">Footer</div>
+
+</body>
+</html>
